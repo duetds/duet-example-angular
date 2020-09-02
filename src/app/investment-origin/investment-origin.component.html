@@ -1,0 +1,12 @@
+<ng-container [formGroup]="form">
+  <duet-checkbox formControlName="salary" label="Valinta 1"></duet-checkbox>
+  <duet-checkbox formControlName="gift" label="Valinta 2"></duet-checkbox>
+  <duet-checkbox formControlName="heritage" label="Valinta 3"></duet-checkbox>
+  <duet-checkbox formControlName="entrepreneurialIncome" label="Valinta 4"></duet-checkbox>
+  <duet-checkbox formControlName="assets" label="Valinta 5"></duet-checkbox>
+  <duet-checkbox formControlName="otherIncome" label="Valinta 6"></duet-checkbox>
+  <duet-checkbox label="Muu, mikä?" (duetChange)="handleExtrasChange($event)"></duet-checkbox>
+  <div *ngIf="hasExtras">
+    <duet-input formControlName="extras" label="Kerro sijoitettavien varojen muu alkuperä" label-hidden></duet-input>
+  </div>
+</ng-container>

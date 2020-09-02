@@ -1,0 +1,77 @@
+<ng-container *ngIf="agreement">
+  <duet-input expand disabled label="Sopimus" [value]="agreement.label"></duet-input>
+  <duet-spacer></duet-spacer>
+  <duet-paragraph>Valitsemasi vaihtoehto jakautuu seuraavasti:</duet-paragraph>
+  <duet-table variation="plain">
+    <table>
+      <thead>
+        <tr>
+          <th>Sijoituskohde</th>
+          <th>Osuus</th>
+          <th class="duet-text-right">Summa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 1<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td>25%</td>
+          <td class="duet-text-right">{{ formatter.format(agreement.price * 0.25) }}</td>
+        </tr>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 2<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td>25%</td>
+          <td class="duet-text-right">{{ formatter.format(agreement.price * 0.25) }}</td>
+        </tr>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 3<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td>50%</td>
+          <td class="duet-text-right">{{ formatter.format(agreement.price * 0.5) }}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2" class="duet-font-weight-semi-bold">Sijoitettava summa</td>
+          <td class="duet-text-right duet-font-weight-semi-bold duet-font-size-large">
+            {{ formatter.format(agreement.price) }}
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </duet-table>
+</ng-container>

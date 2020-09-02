@@ -1,0 +1,49 @@
+<duet-layout center>
+  <div slot="top" role="region">
+    <duet-spacer breakpoint="large" size="x-large"></duet-spacer>
+    <duet-heading level="h1" visual-level="h2">Pääotsikko</duet-heading>
+    <duet-spacer></duet-spacer>
+  </div>
+  <div slot="main">
+    <form [formGroup]="form" (ngSubmit)="handleSubmit($event)">
+      <duet-stepper [selected]="currentStep" (duetStepChange)="handleStepChange($event)">
+        <duet-step heading="Perustiedot" formGroupName="investmentAmount">
+          <duet-paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          </duet-paragraph>
+          <app-investment-amount
+            [form]="form.get('investmentAmount')"
+            [agreements]="agreements"
+          ></app-investment-amount>
+          <duet-spacer></duet-spacer>
+          <duet-button margin="none" variation="primary" (click)="handleNextClick($event)" [disabled]="form.invalid"
+            >Seuraava</duet-button
+          >
+        </duet-step>
+
+        <duet-step heading="Tarkemmat tiedot" formGroupName="investmentOrigin">
+          <duet-paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etdolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+          </duet-paragraph>
+          <app-investment-origin [form]="form.get('investmentOrigin')"></app-investment-origin>
+          <duet-spacer></duet-spacer>
+          <duet-button margin="none" variation="primary" (click)="handleNextClick($event)" [disabled]="form.invalid">
+            Seuraava
+          </duet-button>
+        </duet-step>
+
+        <duet-step heading="Yhteenveto">
+          <duet-spacer></duet-spacer>
+          <app-summary [agreement]="selectedAgreement"></app-summary>
+          <duet-spacer></duet-spacer>
+          <duet-button submit margin="none" variation="primary" expand [disabled]="form.invalid"> Lähetä </duet-button>
+        </duet-step>
+      </duet-stepper>
+    </form>
+  </div>
+</duet-layout>
+<duet-modal [active]="completed" heading="You entered the following data:">
+  <pre><code>{{ form.value | json }}</code></pre>
+</duet-modal>

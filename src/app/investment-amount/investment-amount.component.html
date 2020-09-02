@@ -1,0 +1,90 @@
+<ng-container [formGroup]="form">
+  <duet-select
+    formControlName="agreement"
+    expand
+    label="Valitse sopimus"
+    placeholder="Valitse…"
+    [items]="agreementOptions"
+  >
+  </duet-select>
+  <duet-table variation="plain" *ngIf="selectedAgreement">
+    <table>
+      <thead>
+        <tr>
+          <th>Sijoituskohde</th>
+          <th class="duet-text-right">Osuus</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 1<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td class="duet-text-right">25%</td>
+        </tr>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 2<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td class="duet-text-right">25%</td>
+        </tr>
+        <tr>
+          <td>
+            <duet-button
+              variation="plain"
+              margin="none"
+              padding="none"
+              url="https://www.duetds.com/assets/downloads/localtapiola-brand-guidelines.pdf"
+              external
+            >
+              Kohde 3<duet-spacer size="xx-small" direction="horizontal"></duet-spacer>
+              <duet-icon name="action-new-window-small" margin="none" size="xx-small"></duet-icon>
+              <duet-visually-hidden>, avautuu uuteen ikkunaan</duet-visually-hidden>
+            </duet-button>
+          </td>
+          <td class="duet-text-right">50%</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td class="duet-font-weight-semi-bold">Yhteisarvo</td>
+          <td class="duet-text-right duet-font-weight-semi-bold duet-font-size-large">
+            {{ formatter.format(selectedAgreement.price) }}
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </duet-table>
+  <duet-spacer></duet-spacer>
+  <duet-card variation="plain" background="gray-lighter">
+    <duet-input
+      formControlName="additionalInvestment"
+      numeric-keyboard
+      expand
+      label="Syötä summa"
+      placeholder="50"
+      icon="form-money"
+      type="number"
+    ></duet-input>
+  </duet-card>
+</ng-container>

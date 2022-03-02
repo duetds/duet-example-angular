@@ -83,7 +83,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "duet-angular-template:build"
+            "browserTarget": "duet-angular-template:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
@@ -102,6 +103,14 @@
           "options": {
             "tsConfig": ["tsconfig.app.json"],
             "exclude": ["**/node_modules/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "tsConfig": "tsconfig.spec.json",
+            "configPath" : "config/jest.base.ts",
+            "globalMocks": ["getComputedStyle", "doctype", "styleTransform", "matchMedia"]
           }
         }
       }

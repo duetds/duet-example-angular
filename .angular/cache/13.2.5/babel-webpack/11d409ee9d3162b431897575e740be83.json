@@ -1,0 +1,1 @@
+{"ast":null,"code":"/*!\n * Built with Duet Design System\n */\nfunction chr4() {\n  return Math.random().toString(16).slice(-4);\n}\n\nfunction createID(prefix) {\n  return `${prefix}-${chr4()}${chr4()}-${chr4()}-${chr4()}-${chr4()}-${chr4()}${chr4()}${chr4()}`;\n}\n\nexport { createID as c };","map":null,"metadata":{},"sourceType":"module"}

@@ -18,7 +18,7 @@
           ></app-investment-amount>
           <duet-spacer></duet-spacer>
           <duet-button margin="none" variation="primary" (click)="handleNextClick($event)" [disabled]="form.invalid"
-            >Seuraava</duet-button
+             id="step1">Seuraava</duet-button
           >
         </duet-step>
 
@@ -29,7 +29,7 @@
           </duet-paragraph>
           <app-investment-origin [form]="form.get('investmentOrigin')"></app-investment-origin>
           <duet-spacer></duet-spacer>
-          <duet-button margin="none" variation="primary" (click)="handleNextClick($event)" [disabled]="form.invalid">
+          <duet-button margin="none" variation="primary" (click)="handleNextClick($event)" [disabled]="form.invalid" id="step2">
             Seuraava
           </duet-button>
         </duet-step>
@@ -38,7 +38,7 @@
           <duet-spacer></duet-spacer>
           <app-summary [agreement]="selectedAgreement"></app-summary>
           <duet-spacer></duet-spacer>
-          <duet-button submit margin="none" variation="primary" expand [disabled]="form.invalid"> Lähetä </duet-button>
+          <duet-button submit margin="none" variation="primary" expand [disabled]="form.invalid" id="step3"> Lähetä </duet-button>
         </duet-step>
       </duet-stepper>
     </form>

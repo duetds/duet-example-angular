@@ -23,3 +23,4 @@ src/assets/fonts
 
 # Ignore dist build
 dist
+test-results

@@ -1,0 +1,1 @@
+{"ast":null,"code":"/*!\n * Built with Duet Design System\n */\nconst DuetStringsExternalDefaults = {\n  fi: \"Avautuu uuteen ikkunaan\",\n  sv: \"Öppnas i nytt fönster\",\n  en: \"Opens in a new window\"\n};\nexport { DuetStringsExternalDefaults as D };","map":null,"metadata":{},"sourceType":"module"}

@@ -1,1 +1,0 @@
-{"ast":null,"code":"/*!\n * Built with Duet Design System\n */\nconst inheritGlobalTheme = component => {\n  if (component.theme !== \"default\" && document.documentElement.classList.contains(\"duet-theme-turva\")) {\n    component.theme = \"turva\";\n  }\n};\n\nexport { inheritGlobalTheme as i };","map":null,"metadata":{},"sourceType":"module"}

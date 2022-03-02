@@ -19,13 +19,15 @@ src/js/components
 src/assets/fonts
 
 # Ignore dist build
-/dist
-/test-results
-/tmp
-/out-tsc
+dist
+test-results
+tmp
+out-tsc
+coverage
 
 # IDEs and editors
-/.idea
+.idea
+.angular
 .project
 .classpath
 .c9/

@@ -1,1 +1,0 @@
-{"ast":null,"code":"/*!\n * Built with Duet Design System\n */\nfunction isInternetExplorer() {\n  const ua = navigator.userAgent || navigator.vendor;\n  return \"documentMode\" in document || /Edge/.test(ua);\n}\n\nexport { isInternetExplorer as i };","map":null,"metadata":{},"sourceType":"module"}

@@ -8,8 +8,6 @@ yarn-error.log
 package-lock.json
 .idea
 .eslintcache
-.DS_Store
-.vscode
 .stencil
 *.suo
 *.ntvs*
@@ -22,5 +20,37 @@ src/js/components
 src/assets/fonts
 
 # Ignore dist build
-dist
-test-results
+/dist
+/test-results
+/tmp
+/out-tsc
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
